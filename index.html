@@ -742,13 +742,16 @@
             const fallbackImage = `https://placehold.co/400x250/720000/ffffff?text=${encodeURIComponent(productName)}`;
             const finalImageUrl = (imageUrl && imageUrl.startsWith('http')) ? imageUrl : fallbackImage;
 
-            const whatsappMessage = encodeURIComponent(
-                `🛍️ *Order from Kegalle Scout Shop*\n\n` +
-                `Product: ${productName}\n` +
-                `ID: ${productId}\n` +
-                `Price: Rs. ${price}\n\n` +
-                `I would like to order this item. Please provide more details.`
-            );
+           const whatsappMessage = encodeURIComponent(
+  `📦 *New Order Inquiry – Kegalle Scout Shop*\n\n` +
+  `🛒 *Product Name:* ${productName}\n` +
+  `🆔 *Product ID:* ${productId}\n` +
+  `💰 *Price:* Rs. ${price}\n\n` +
+  `Hello! I’m interested in ordering this item. 📝\n` +
+  `Could you please share more details about availability and delivery? 🚚\n\n` +
+  `Thank you! 🙏`
+);
+
             const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
             
             const buttonHtml = inStock 
